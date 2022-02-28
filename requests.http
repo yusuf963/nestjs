@@ -1,15 +1,16 @@
 ### LIST ALL MESSAGES
 GET  http://localhost:3000/messages/
 
+### GET ONE MESSAGE BY ID
+get http://localhost:3000/messages/1454
+
 ### POST NEW MESSAGE
+
 post http://localhost:3000/messages
 content-type: application/json
 
 {
-  "content": "Hey there!!!🚀🚀🧨",
+  "content": "yusuf@example.com",
   "age": 12,
   "isAdmin": true
 }
-
-### GET ONE MESSAGE BY ID
-get http://localhost:3000/messages/12
