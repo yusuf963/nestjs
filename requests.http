@@ -2,7 +2,7 @@
 GET  http://localhost:3000/messages/
 
 ### GET ONE MESSAGE BY ID
-get http://localhost:3000/messages/1454
+get http://localhost:3000/messages/14
 
 ### POST NEW MESSAGE
 
@@ -10,7 +10,7 @@ post http://localhost:3000/messages
 content-type: application/json
 
 {
-  "content": "yusuf@example.com",
+  "content": "yusufe@example.com",
   "age": 12,
   "isAdmin": true
 }

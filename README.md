@@ -97,6 +97,8 @@ https://github.com/typestack/class-transformer
 # There is a special system in Nest called depedencies injection, to set up adependencies between two classes
 # Nest has nice build in request response status with erro message e.g notfound, unauthorised ... find the docs or here
 `messages/node_modules/@nestjs/common/exceptions`
+# Inversion of Control Principle, for reusable code
+ - class should not create instances of its dependencies on its own
 
 # Questions:
 1. what service class or service.ts file do in nest?
