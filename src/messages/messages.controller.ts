@@ -1,21 +1,30 @@
-import { Controller, Get, Post, Param, Body } from '@nestjs/common';
-import { CreateMessagesDto } from './dtos/create-messages.dto'
+import { Controller, Get, Post, Param, Body, NotFoundException } from '@nestjs/common';
+import { CreateMessagesDto } from './dtos/create-messages.dto';
+import { MessagesService } from './messages.service'
 
 @Controller('messages')
 export class MessagesController {
+  messagesService: MessagesService;
+  constructor() {
+    this.messagesService = new MessagesService
+  }
   @Get()
   listMessages() {
-    return 'get all your messages here'
+    return this.messagesService.findAll()
+  }
+
+  @Get('/:id')
+  async getMessages(@Param('id') id: string) {
+    const message = await this.messagesService.findOne(id)
+    if (!message) {
+      // NotFoundException is build in nest nice method in side the common library
+      throw new NotFoundException('message not found')
+    }
+    return message
   }
 
   @Post()
   createMessages(@Body() body: CreateMessagesDto) {
-    console.log(body)
-  }
-
-  @Get('/:id')
-  getMessages(@Param('id') id: string) {
-    console.log(id)
-    return 'hey I am one message'
+    return this.messagesService.postMessage(body.content)
   }
 }

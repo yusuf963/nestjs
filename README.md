@@ -91,3 +91,13 @@ https://github.com/yusuf963/class-validator
 install `class-transformer` takes plain object to conv erted into a class
 https://github.com/typestack/class-transformer
 
+# import {readFile, writeFile } from fs/promise as native node module
+#! then you need to parse the json string into an object
+```const contents = await readFile('messages.json', 'utf8');const messages = JSON.parse(contents);```
+# There is a special system in Nest called depedencies injection, to set up adependencies between two classes
+# Nest has nice build in request response status with erro message e.g notfound, unauthorised ... find the docs or here
+`messages/node_modules/@nestjs/common/exceptions`
+
+# Questions:
+1. what service class or service.ts file do in nest?
+  - isn't identical to the reository file/ class
