@@ -81,3 +81,13 @@ Nest Command
 `npm run start:dev` to start the server in the dev mode(recommended)
 `nest generate module messages` too create folder
 `nest genetate controller messages/messages --flat`
+controlloer # are class decorators
+Get, Post etc # are method decorators
+body, param # are argument decorators
+## Create pipe/ validation pipe
+# Data transfer Object DTO is carries data between two places
+install `class-validator`
+https://github.com/yusuf963/class-validator
+install `class-transformer` takes plain object to conv erted into a class
+https://github.com/typestack/class-transformer
+
